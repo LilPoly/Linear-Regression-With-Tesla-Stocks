@@ -125,7 +125,17 @@ reg.fit(x_train, y_train)
 y_hat = reg.predict(x_train)
 ```
 Next, we will build a scatter plot.
+
 ![Scatter](images/output_regression.png)
+
+Our regression model looks great. To make sure the predictions are accurate, let's create a histogram of residuals.
+``` python
+sns.displot(y_train - y_hat)
+```
+
+![Adj CLose](images/output_adj.img)
+
+The peak is exactly at zero and the distribution is symmetric, which indicates that the model generalizes the data well and has no obvious systematic errors. Good!
 
 
 
