@@ -125,7 +125,7 @@ reg.fit(x_train, y_train)
 y_hat = reg.predict(x_train)
 ```
 Next, we will build a scatter plot.
-
+![Scatter](images/output_regression.png)
 
 
 
