@@ -146,7 +146,11 @@ In Python, calculating R-Squared requires only one line of code.
 ``` python
 reg.score(x_train, y_hat)
 ```
+After running the code, we will see the result:
 
+``` bush
+1
+```
 
 
 
