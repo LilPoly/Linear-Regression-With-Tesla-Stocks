@@ -137,5 +137,7 @@ sns.displot(y_train - y_hat)
 
 The peak is exactly at zero and the distribution is symmetric, which indicates that the model generalizes the data well and has no obvious systematic errors. Good!
 
+# R^2
+
 
 
