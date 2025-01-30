@@ -18,5 +18,5 @@ plt.legend()
 plt.show()
 
 ```
-
+![Plot](images/output.png)
 
