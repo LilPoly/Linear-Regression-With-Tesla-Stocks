@@ -60,7 +60,7 @@ ax5.set_title('Volume and Adj CLose')
 
 plt.show()
 ```
-!(images/output_scatter.png)
+![Scatter](images/output_scatter.png)
 
 
 
