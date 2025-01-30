@@ -139,5 +139,14 @@ The peak is exactly at zero and the distribution is symmetric, which indicates t
 
 # R<sup>2</sup>
 
+R-Squared (R² or the coefficient of determination) is a statistical measure in a regression model that determines the proportion of variance in the dependent variable that can be explained by the independent variable. In other words, r-squared shows how well the data fit the regression model (the goodness of fit).
+
+In Python, calculating R-Squared requires only one line of code.
+
+``` python
+reg.score(x_train, y_hat)
+```
+
+
 
 
