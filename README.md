@@ -43,7 +43,24 @@ For better work, we will only take one year from the date.
 data_1['Year'] = data_1['Date'].dt.year
 data_1.drop(['Date'], axis=1, inplace=True)
 ```
+# Scatter
+Next, we can make a scatter plot between the adjusted price and the open, low, high, and volume.
+``` python
+f, (ax1,ax2,ax3, ax4, ax5) = plt.subplots(1,5, sharey=True, figsize=(15,3))
+ax1.scatter(data_cleaned['Year'],data_cleaned['Adj Close'])
+ax1.set_title('Adj Close and Year')
+ax2.scatter(data_cleaned['Open'], data_cleaned['Adj Close'])
+ax2.set_title('Open Price and Adj Close')
+ax3.scatter(data_cleaned['High'], data_cleaned['Adj Close'])
+ax3.set_title('High and Adj Close')
+ax4.scatter(data_cleaned['Low'], data_cleaned['Adj Close'])
+ax4.set_title('Low Price and Adj Close')
+ax5.scatter(data_cleaned['Volume'], data_cleaned['Adj Close'])
+ax5.set_title('Volume and Adj CLose')
 
+plt.show()
+```
+!(images/output_scatter.png)
 
 
 
