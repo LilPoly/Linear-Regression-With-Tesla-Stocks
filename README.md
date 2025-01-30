@@ -1,4 +1,4 @@
-# Linear-Regression-With-Tesla-Stocks
+# Linear Regression With Tesla Stocks
 This project demonstrates the implementation of linear regression to predict Tesla stock prices. 
 
 Given data on date, open price, highest price, lowest price, closing price, adjusted price and volume. 
@@ -88,6 +88,44 @@ The final table before linear regression will look like this.
 | 25.000000  | 21.959999  | 2010 |
 | 23.000000  | 19.200001  | 2010 |
 | 20.000000  | 16.110001  | 2010 |
+
+# Linear Regression Model
+First we need to declare the inputs and the targets. We want to predict the price, so the adjusted price is the target. The open price and the year are the inputs.
+``` python
+inputs = data_cleaned[['Open', 'Year']]
+target = data_cleaned['Adj Close']
+```
+# Scale the Data
+Data-Scaling is typically achieved by applying either the ‘Normalization’ or ‘Standardization’ Data-Transforms. These are two different approaches, which both attempt to achieve the same goal: transform the raw data from its original scale to a more standard one.
+To do this, we need to import StandardScaler.
+``` python
+from sklearn.preprocessing import StandardScaler
+```
+Next, we scale the inputs.
+``` python
+scaler = StandardScaler()
+scaler.fit(inputs)
+inputs_scaled = scaler.transform(inputs)
+```
+# Train Test Split
+A machine learning model must be able to not only perform well on the data it is trained on, but also have the ability to generalize its knowledge to new, unknown data.
+
+- The training set is used to train the model, that is, to build its parameters.
+
+- The test set is used to test the model's performance on new data, to make sure that the model can "generalize" its conclusions, and not simply memorize (overfitting) the training data.
+
+``` python
+x_train, x_test, y_train, y_test = train_test_split(inputs_scaled, target, test_size=0.2, random_state=365)
+```
+# Create the regression
+Next, we create a linear regression model, train it on the training data, and use it to predict values ​​on the same data.
+``` python
+reg = LinearRegression()
+reg.fit(x_train, y_train)
+y_hat = reg.predict(x_train)
+```
+Next, we will build a scatter plot.
+
 
 
 
