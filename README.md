@@ -76,8 +76,11 @@ vif['features'] = variables.columns
 | Open  | 1.000000   | 0.999642   | 0.999595   |
 | High  | 0.999642   | 1.000000   | 0.999582   |
 | Low   | 0.999595   | 0.999582   | 1.000000   |
+
 The multicollinearity is very high, so we can remove two values. We will leave only the Open Price.
+
 The final table before linear regression will look like this.
+
 | Open       | Adj Close  | Year |
 |------------|------------|------|
 | 19.000000  | 23.889999  | 2010 |
