@@ -149,8 +149,15 @@ reg.score(x_train, y_hat)
 After running the code, we will see the result:
 
 ``` bush
-1
+1.0
 ```
+So good!
 
+# Detailed analysis
 
+The full process is written in the **linear_regression.ipynb** file. 
+
+At the beginning of the file you can find a quick [link](#Linear-Regression-in-Jupyter-Notebook) to the **.ipynb** file.
+
+Thanks for reading!
 
