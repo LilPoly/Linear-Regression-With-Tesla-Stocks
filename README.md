@@ -8,5 +8,12 @@ I use the standard approach to linear regression, including data preparation, mo
 [Tesla stock data from 2010 to 2020](https://www.kaggle.com/datasets/timoboz/tesla-stock-data-from-2010-to-2020/data)
 
 # Linear Regression in Jupyter Notebook 
-For a detailed description of how to perform linear regression, please open the file [linear_regression.ipynb](https://nbviewer.org/github/LilPoly/Linear-Regression-With-Tesla-Stocks/blob/main/linear_regression.ipynb). 
+For a detailed description of linear regression, please open the file [linear_regression.ipynb](https://nbviewer.org/github/LilPoly/Linear-Regression-With-Tesla-Stocks/blob/main/linear_regression.ipynb). 
 Now, let's briefly talk about the most important things.
+
+# Initial plot of stock prices by year.
+``` python
+plt.plot(df['Date'], df['Adj Close'])
+plt.legend()
+plt.show()
+
