@@ -18,4 +18,5 @@ plt.legend()
 plt.show()
 
 ```
-![Plot](https://imgur.com/a/RTmoJAN)
+![Plot](https://i.imgur.com/RTmoJAN.png)
+
