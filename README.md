@@ -17,3 +17,5 @@ plt.plot(df['Date'], df['Adj Close'])
 plt.legend()
 plt.show()
 
+```
+![Plot](https://imgur.com/a/RTmoJAN)
