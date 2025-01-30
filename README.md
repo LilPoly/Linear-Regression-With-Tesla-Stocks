@@ -62,6 +62,29 @@ plt.show()
 ```
 ![Scatter](images/output_scatter.png)
 
+# Multicollinearity
+Multicollinearity is a very important thing before constructing linear regression. Let's check it between values.
+``` python
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+variables = data_cleaned[['Open', 'High', 'Low', 'Year']]
+vif = pd.DataFrame()
+vif['VIF'] = [variance_inflation_factor(variables.values, i) for i in range(variables.shape[1])]
+vif['features'] = variables.columns
+```
+|       | Open       | High       | Low        |
+|-------|------------|------------|------------|
+| Open  | 1.000000   | 0.999642   | 0.999595   |
+| High  | 0.999642   | 1.000000   | 0.999582   |
+| Low   | 0.999595   | 0.999582   | 1.000000   |
+The multicollinearity is very high, so we can remove two values. We will leave only the Open Price.
+The final table before linear regression will look like this.
+| Open       | Adj Close  | Year |
+|------------|------------|------|
+| 19.000000  | 23.889999  | 2010 |
+| 25.790001  | 23.830000  | 2010 |
+| 25.000000  | 21.959999  | 2010 |
+| 23.000000  | 19.200001  | 2010 |
+| 20.000000  | 16.110001  | 2010 |
 
 
 
